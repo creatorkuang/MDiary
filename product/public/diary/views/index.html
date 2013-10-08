@@ -1,0 +1,7 @@
+<div ng-hide="isLogin" class="container">
+          <div ng-include="" src="'views/letmein.html'" ng-controller="letMeInCtrl"></div>
+</div>
+<div ng-show="isLogin">
+	<h2>{{me.username}}，欢迎使用晨间日记。</h2>
+	<a class="btn btn-success" ng-href="#/diary/new" ng-hide="diary.edit">创建新日记</a>
+</div>

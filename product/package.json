@@ -1,0 +1,11 @@
+{
+  "name": "Jizhi",
+  "version": "0.0.1",
+  "private": true,
+  
+  "dependencies": {
+    "deployd":"0.6.11",
+    "dpd-email":"0.0.3",
+    "dpd-event":"0.0.2"
+  }
+}

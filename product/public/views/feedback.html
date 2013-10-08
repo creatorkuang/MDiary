@@ -1,0 +1,13 @@
+<div class="feedback-btn" ng-click="openFeedback()">反馈建议</div>
+              <div modal="feedback" close="closeFeedback()" options="opts">
+                  <div class="modal-header">
+                      <h4>反馈给我们：</h4>
+                  </div>
+                  <div class="modal-body">
+                          <textarea placeholder="请写下你的问题或者建议。" rows="3" class="input-xxlarge" ng-model="feedbackf.text"></textarea>
+                  </div>
+                  <div class="modal-footer">
+                     <button ng-click="sendFeedback()" class="btn btn-success">确认发送</button>
+                      <button class="btn btn-warning cancel" ng-click="closeFeedback()">取消</button>
+               </div>
+</div>

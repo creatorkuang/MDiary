@@ -1,0 +1,19 @@
+<div ng-hide="isLogin" class="container">
+          <div ng-include="" src="'views/letmein.html'" ng-controller="letMeInCtrl"></div>
+</div>
+<div ng-show="isLogin">
+ <a class="btn btn-success" ng-href="#/diary/new" ng-hide="diary.edit">创建新日记</a>
+ <div class="clearfix"></div>
+<div id="diaryCalendar" class="center">
+	<dl class="diaryCal">周日</dl>
+	<dl class="diaryCal">周一</dl>
+	<dl class="diaryCal">周二</dl>
+	<dl class="diaryCal">周三</dl>
+	<dl class="diaryCal">周四</dl>
+	<dl class="diaryCal">周五</dl>
+	<dl class="diaryCal">周六</dl>
+	<dl ng-repeat="lastday in lastdays" class="diaryCal calGrey">{{lastday}}</dl>
+	<dl ng-repeat="monthday in monthdays" class="diaryCal">{{monthday}}</dl>
+	<dl ng-repeat="nextday in nextdays" class="diaryCal calGrey">{{nextday}}</dl>
+</div>
+</div>

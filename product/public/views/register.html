@@ -1,0 +1,21 @@
+<div class="row mtl">
+		<form name="register" class="well">
+			<fieldset>
+				<legend>欢迎注册晨间日记：</legend>
+				<label>用户名：</label>
+				<input type="text" placeholder="建议用英文搭配数字" name="username" ng-model="rgform.username" class="input-xxlarge span4" ng-minlength="3">
+				<span class="alert alert-warning" ng-show="register.username.$error.minlength">长度不少于3个字符</span><br>
+				<label>常用邮箱：</label>
+				<input type="email" placeholder="example@gmail.com" class="span4" name="email" ng-model="rgform.email" required="">
+				<br>
+				<label>您的登陆密码：</label>
+				<input type="password" name="password" placeholder="登陆密码" class="span4" ng-model="rgform.password" ng-minlength="6">			
+				<span ng-show="register.password.$error.minlength" class="alert alert-warning">长度不少于6个字符</span>
+							<br>
+				<label>确认登陆密码：</label>
+				<input type="password" name="password2" placeholder="再次输入密码" ng-model="check.password" class="span4" required="">
+				<span ng-show="notMatch" class="alert alert-warning">两次密码不相等</span><br>
+				<button type="submit" ng-disabled="register.$invalid" class="btn btn-success" ng-click="registerUser()"><i ng-show="isSending" class="icon-spinner icon-spin"></i>快速注册</button>
+			</fieldset>
+		</form>
+	 </div>

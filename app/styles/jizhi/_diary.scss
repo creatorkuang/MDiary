@@ -1,0 +1,34 @@
+/* Diary */
+.diary{
+    width:90%;
+    margin-left:3%;
+    height:200px;
+}
+.diarytime{
+    width:inherit;
+    display:inline-block;
+    input.span1{
+        width:56px;
+    };
+    tr.text-center{
+        display:none;
+    }
+}
+.mheight{
+    min-height:200px;
+}
+#diaryCalendar{
+    margin-top:10px;
+    border:1px solid #ddd;
+    padding:10px;
+    border-radius:5px;
+    .diaryCal{
+      width:13%;
+      display:inline-block;
+      height: 30px;
+      font-size: 1.5em;
+    };
+    .calGrey{
+      color:#ddd;
+    }
+}

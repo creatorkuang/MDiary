@@ -1,0 +1,21 @@
+{
+	"type": "Collection",
+	"properties": {
+		"owner": {
+			"name": "owner",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "owner",
+			"order": 0
+		},
+		"tpl": {
+			"name": "tpl",
+			"type": "object",
+			"typeLabel": "object",
+			"required": true,
+			"id": "tpl",
+			"order": 1
+		}
+	}
+}

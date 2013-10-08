@@ -1,0 +1,29 @@
+{
+	"type": "UserCollection",
+	"properties": {
+		"email": {
+			"name": "email",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "email",
+			"order": 0
+		},
+		"createDate": {
+			"name": "createDate",
+			"type": "number",
+			"typeLabel": "number",
+			"required": false,
+			"id": "createDate",
+			"order": 1
+		},
+		"notify": {
+			"name": "notify",
+			"type": "boolean",
+			"typeLabel": "boolean",
+			"required": true,
+			"id": "notify",
+			"order": 2
+		}
+	}
+}

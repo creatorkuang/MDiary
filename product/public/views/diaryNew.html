@@ -1,0 +1,82 @@
+<div class="bgwhite well well-small">
+ 	<div class="row-fluid solid">
+		<div class="span4">
+			<h3 class="dashed center">心灵 成功日记</h3>
+			<textarea ui-tinymce="tinymceSimple" ng-model="diary.d1" class="diary"></textarea>
+		</div>
+		<div class="span4">
+			<h3 class="dashed center">人际关系 家庭 朋友</h3>
+			<textarea ui-tinymce="tinymceSimple" ng-model="diary.d2" class="diary"></textarea>
+		</div>
+		<div class="span4">
+			<h3 class="dashed center">愿望 人生的梦</h3>
+			<textarea ui-tinymce="tinymceSimple" ng-model="diary.d3" class="diary"></textarea>
+		</div>
+	</div>
+	<div class="row-fluid solid">
+		<div class="span4">
+			<h3 class="dashed center">健康 饮食 锻炼</h3>
+			<textarea ui-tinymce="tinymceSimple" ng-model="diary.d4" class="diary"></textarea>
+		</div>
+		<div class="span4">
+			<h3 class="dashed center">{{now|date}}</h3>
+			<div tabset="">
+				<div tab="" heading="感觉">
+					<div>天气：<select ng-model="diary.weather">
+							  <option value="1">晴朗</option>
+							  <option value="2">多云</option>
+							  <option value="3">阴天</option>
+							  <option value="4">小雨</option>
+							  <option value="5">大雨</option>
+						 </select>
+					</div>
+					<div>心情：<select ng-model="diary.mood">
+							  <option value="1">开心</option>
+							  <option value="2">平静</option>
+							  <option value="3">低落</option>
+						 </select>
+					</div>
+					<div>健康：<select ng-model="diary.health">
+							  <option value="1">良好</option>
+							  <option value="2">一般</option>
+							  <option value="3">较差</option>
+							  <option value="4">生病</option>
+						 </select>
+					</div>
+					<div>
+						起床：<div timepicker="" ng-model="diary.getup" show-meridian="true" class="diarytime"></div>		
+					</div>
+					<div>
+						睡觉：<div timepicker="" ng-model="diary.sleep" show-meridian="true" class="diarytime"></div>		
+					</div>
+				</div>
+				<div tab="" heading="纪念日">
+					<div memory-day="" entity="diary"></div>
+				</div>
+			</div>
+			
+			
+		</div>
+		<div class="span4">
+			<h3 class="dashed center">财务管理</h3>
+			<textarea ui-tinymce="tinymceSimple" ng-model="diary.d5" class="diary"></textarea>
+		</div>
+	</div>
+	<div class="row-fluid solid">
+		<div class="span4">
+			<h3 class="dashed center">情报 资讯 阅读</h3>
+			<textarea ui-tinymce="tinymceSimple" ng-model="diary.d6" class="diary"></textarea>
+		</div>
+		<div class="span4">
+			<h3 class="dashed center">工作 创意 兴趣</h3>
+			<textarea ui-tinymce="tinymceSimple" ng-model="diary.d7" class="diary"></textarea>
+		</div>
+		<div class="span4">
+			<h3 class="dashed center">未来日记</h3>
+			<textarea ui-tinymce="tinymceSimple" ng-model="diary.d8" class="diary"></textarea>
+		</div>
+	</div>
+	<div class="center">
+		<button class="btn ptm pbm prl pll mtm btn-success" style="font-size:2em" ng-click="saveDiary()">保存</button>
+	</div>
+</div>

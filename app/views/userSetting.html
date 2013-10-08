@@ -1,0 +1,27 @@
+ <div ng-hide="isLogin" class="container">
+          <div ng-include src="'views/letmein.html'"  ng-controller="letMeInCtrl"></div>
+</div>
+<div class="row" ng-show="isLogin">
+
+	   <div class="well well-small">
+			<h4 class="checkbox"> <input type="checkbox" ng-model="me.notify">发送邮件通知</h4>
+			<div class="alert alert-warnning">如果去掉勾选，你将无法收到邮件通知。</div>
+			<button class="btn btn-success" ng-click="updateNotify()">保存</button>
+		</div>
+		<div class="well well-small">
+			<h3>修改密码：</h3>
+			<form name='passf'>
+				<fieldset>
+					<label>新密码：</label>
+					<input type="password" name='password'  class="input-xlarge" ng-model="profile.password" required/>
+					<label>再次确认：</label>
+					<input type="password" name='password2'  class="input-xlarge"  ng-model="profile.password2" ng-change="checkPassword()" required/>
+					 <span class="alert alert-info" ng-show="notMatch">密码不匹配</span>
+					 <br>
+					<button class="btn btn-success" ng-click="updatePass()" ng-disabled="passf.$invalid" >保存</button>
+
+				</fieldset>
+			</form>
+		</div>
+	
+</div>

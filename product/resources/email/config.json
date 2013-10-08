@@ -1,0 +1,12 @@
+{
+	"type": "Email",
+	"host": "smtp.exmail.qq.com",
+	"port": "465",
+	"ssl": true,
+	"username": "no-reply@jiizhi.com",
+	"password": "noreply@jizhi2013",
+	"defaultFromAddress": "no-reply@jiizhi.com",
+	"defaultTemplate": "",
+	"internalOnly": true,
+	"productionOnly": true
+}

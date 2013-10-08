@@ -1,0 +1,141 @@
+{
+	"type": "Collection",
+	"properties": {
+		"d1": {
+			"name": "d1",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "d1",
+			"order": 0
+		},
+		"d2": {
+			"name": "d2",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "d2",
+			"order": 1
+		},
+		"d3": {
+			"name": "d3",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "d3",
+			"order": 2
+		},
+		"d4": {
+			"name": "d4",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "d4",
+			"order": 3
+		},
+		"d5": {
+			"name": "d5",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "d5",
+			"order": 4
+		},
+		"d6": {
+			"name": "d6",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "d6",
+			"order": 5
+		},
+		"d7": {
+			"name": "d7",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "d7",
+			"order": 6
+		},
+		"d8": {
+			"name": "d8",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "d8",
+			"order": 7
+		},
+		"weather": {
+			"name": "weather",
+			"type": "number",
+			"typeLabel": "number",
+			"required": false,
+			"id": "weather",
+			"order": 8
+		},
+		"mood": {
+			"name": "mood",
+			"type": "number",
+			"typeLabel": "number",
+			"required": false,
+			"id": "mood",
+			"order": 9
+		},
+		"health": {
+			"name": "health",
+			"type": "number",
+			"typeLabel": "number",
+			"required": false,
+			"id": "health",
+			"order": 10
+		},
+		"getup": {
+			"name": "getup",
+			"type": "number",
+			"typeLabel": "number",
+			"required": false,
+			"id": "getup",
+			"order": 11
+		},
+		"sleep": {
+			"name": "sleep",
+			"type": "number",
+			"typeLabel": "number",
+			"required": false,
+			"id": "sleep",
+			"order": 12
+		},
+		"mdays": {
+			"name": "mdays",
+			"type": "array",
+			"typeLabel": "array",
+			"required": false,
+			"id": "mdays",
+			"order": 13
+		},
+		"tpl": {
+			"name": "tpl",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "tpl",
+			"order": 14
+		},
+		"owner": {
+			"name": "owner",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "owner",
+			"order": 15
+		},
+		"date": {
+			"name": "date",
+			"type": "number",
+			"typeLabel": "number",
+			"required": false,
+			"id": "date",
+			"order": 16
+		}
+	}
+}
