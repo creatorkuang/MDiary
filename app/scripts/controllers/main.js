@@ -1,6 +1,6 @@
 'use strict';
 angular.module('jizhiApp')
-  .controller('MainCtrl',['$scope','$rootScope','$timeout','$location','$window','$routeParams',function($scope,$rootScope,$timeout,$location,$window,$routeParams){
+  .controller('MainCtrl',['$scope','$rootScope','$timeout','$location','$window','$routeParams','jizhiUser',function($scope,$rootScope,$timeout,$location,$window,$routeParams,jizhiUser){
 // google analysic
 $scope.$on('$viewContentLoaded', function(event){
   var path=$location.path();

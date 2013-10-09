@@ -5,15 +5,25 @@
  <a class="btn btn-success" ng-href="#/diary/new" ng-hide="diary.edit">创建新日记</a>
  <div class="clearfix"></div>
 <div id="diaryCalendar" class="center">
-	<dl class="diaryCal">周日</dl>
-	<dl class="diaryCal">周一</dl>
-	<dl class="diaryCal">周二</dl>
-	<dl class="diaryCal">周三</dl>
-	<dl class="diaryCal">周四</dl>
-	<dl class="diaryCal">周五</dl>
-	<dl class="diaryCal">周六</dl>
-	<dl ng-repeat="lastday in lastdays" class="diaryCal calGrey">{{lastday}}</dl>
-	<dl ng-repeat="monthday in monthdays" class="diaryCal">{{monthday}}</dl>
-	<dl ng-repeat="nextday in nextdays" class="diaryCal calGrey">{{nextday}}</dl>
+	<a ng-click="preCal()" ng-href="" class="btn pull-left">上一月</a>
+	<a ng-click="nextCal()" ng-href="" class="btn pull-right">下一月</a>
+	<h3>{{year}}年{{month+1}}月</h3>
+	<h4 class="diaryCal">周日</h4>
+	<h4 class="diaryCal">周一</h4>
+	<h4 class="diaryCal">周二</h4>
+	<h4 class="diaryCal">周三</h4>
+	<h4 class="diaryCal">周四</h4>
+	<h4 class="diaryCal">周五</h4>
+	<h4 class="diaryCal">周六</h4>
+	<dl ng-repeat="lastday in lastdays" class="diaryCal calGrey"><span class="btn">{{lastday}}</span></dl>
+	<dl ng-repeat="monthday in monthdays" class="diaryCal">
+		<span ng-show="monthday.id" class="btn btn-warning">
+	        <a ng-href="#/diary/{{monthday.id}}">{{monthday.num}} </a>
+		</span>
+		<span ng-hide="monthday.id" class="btn">
+		   {{monthday.num}} 
+	    </span>
+	</dl>
+	<dl ng-repeat="nextday in nextdays" class="diaryCal calGrey"><span class="btn">{{nextday}}</span></dl>
 </div>
 </div>

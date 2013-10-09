@@ -8,13 +8,8 @@ angular.module('jizhiApp')
     return {
       require: 'ngModel',
       link: function (scope, elm, attrs, ngModel) {
-        $.ajax({
-			  url: 'components/vendors/tinymce/tinymce.min.js',
-			  dataType: "script",
-			  success: function(){
-			  	 var expression, options, tinyInstance,
-			 
-		          updateView = function () {
+      	 var expression, options, tinyInstance,
+		         updateView = function () {
 		            ngModel.$setViewValue(elm.val());
 		            if (!scope.$$phase) {
 		              scope.$apply();
@@ -62,16 +57,16 @@ angular.module('jizhiApp')
 		          mode: 'exact',
 		          elements: attrs.id
 		        };
-			  		  // extend options with initial uiTinymceConfig and options from directive attribute value
-			        angular.extend(options, expression);
+		        angular.extend(options, expression);
+		         scope.tinymceInit=function(options){
+		         	 // extend options with initial uiTinymceConfig and options from directive attribute value
 			        setTimeout(function () {
 			         $window.tinymce.dom.Event.domLoaded = true;
 			         tinymce.baseURL="/components/vendors/tinymce";
 			          tinymce.init(options);
 			        });
 
-
-			        ngModel.$render = function() {
+			      ngModel.$render = function() {
 			          if (!tinyInstance) {
 			            tinyInstance = tinymce.get(attrs.id);
 			          }
@@ -79,8 +74,21 @@ angular.module('jizhiApp')
 			            tinyInstance.setContent(ngModel.$viewValue || '');
 			          }
 			        };
-			  }
-			});
+		         }
+
+		        // check if the tinmce js has load
+		        if(isLoaded){
+		        	scope.tinymceInit(options);
+		        }else{
+		          $.ajax({
+					  url: 'components/vendors/tinymce/tinymce.min.js',
+					  dataType: "script",
+					  success: function(){	
+					  	 scope.tinymceInit(options);
+					  	 isLoaded=true;
+					  }
+					});
+		        }
       
       }
     };

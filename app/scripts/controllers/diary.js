@@ -34,30 +34,50 @@ angular.module('jizhiApp')
    	})
    }
 }])
-.controller('diaryArchiveCtrl',['$scope','jzDiary',function($scope,jzDiary){
-	var date=new Date(),
-	    y=date.getFullYear(),
-	    m=date.getMonth(),
-	    d=date.getDate(),
-	    first_day=new Date(y,m,1).getDay(),
-	    final_day=new Date(y,m+1,0).getDate(),
-	    last_day=new Date(y,m,0).getDate(),
-	    surplus=42-first_day-final_day;
-	
-	// calculater last month days   
-    	$scope.lastdays=[];
-    	for(var i=0;i<first_day;i++){
-    		$scope.lastdays[i]=last_day-(first_day-1)+i;
-    	}
-    //calculate this month days
-       $scope.monthdays=[];
-       for(var j=0;j<final_day;j++){
-       	$scope.monthdays[j]=j+1;
-       }
-    // calculate the surplue
-       $scope.nextdays=[];
-       for(var k=0;k<surplus;k++){
-       	$scope.nextdays[k]=k+1;
-       }
+.controller('diaryArchiveCtrl',['$scope','jzDiary','$filter',function($scope,jzDiary,$filter){
+	$scope.drawCal=function(y,m){
+		var first_day=new Date(y,m,1).getDay(),
+		    final_day=new Date(y,m+1,0).getDate(),
+		    last_day=new Date(y,m,0).getDate(),
+		    surplus=42-first_day-final_day;
+		
+		// calculater last month days   
+	    	$scope.lastdays=[];
+	    	for(var i=0;i<first_day;i++){
+	    		$scope.lastdays[i]=last_day-(first_day-1)+i;
+	    	}
+	      	//calculate this month days 
+	      	 $scope.monthdays=[];
+	      	for(var j=0;j<final_day;j++){
+	       	// check if numbers in the array
+	       	   	$scope.monthdays[j]={num:j+1,id:''};
+	       }
+	       // get exsiting days in this month
+	    jzDiary.query({date:{$gt:new Date(y,m,1).getTime(),$lt:new Date(y,m+1,0).getTime()}}).then(function(result){
+	    	for(var l=0;l<result.length;l++){
+	    		var exd=$filter('date')(result[l].date,['d']);
+	    		$scope.monthdays[exd-1]={num:exd,id:result[l].id};
+	    	}
+	    })
+	    // calculate the surplue
+	       $scope.nextdays=[];
+	       for(var k=0;k<surplus;k++){
+	       	$scope.nextdays[k]=k+1;
+	       }
+  }// end of draw cal
+
+   // drawcal of this month
+   var date=new Date();
+   $scope.year=date.getFullYear(),
+   $scope.month=date.getMonth();
+   $scope.drawCal($scope.year,$scope.month);
+    $scope.preCal=function(){
+      $scope.month=$scope.month-1;
+      $scope.drawCal($scope.year,$scope.month);
+    }
+    $scope.nextCal=function(){
+      $scope.month=$scope.month+1;
+      $scope.drawCal($scope.year,$scope.month);
+    }
     
 }]);

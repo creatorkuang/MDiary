@@ -73,10 +73,20 @@
     <script src="scripts/services/user.js"></script>
     <script src="scripts/services/diary.js"></script>
     <!-- endbuild --> 
+
      <script src="components/vendors/socket.io.js" ></script> 
 <script type="text/javascript">
-var HOST="http://cnmm.jiizhi.com/diary/",
+var HOST="http://localhost:8080",
     socket = io.connect(HOST);
+var isLoaded=false;
+      // load tinymce aschromous 
+    $.ajax({
+            url: 'components/vendors/tinymce/tinymce.min.js',
+            dataType: "script",
+            success: function(){  
+              isLoaded=true;
+            }
+          });
 </script> 
 <script type="text/javascript">
   var _gaq = _gaq || [];

@@ -2,15 +2,15 @@ var deployd = require('deployd');
 
 var server = deployd({
   port: process.env.PORT || 8080,
-  env: 'production',
+  env: 'development',
   db: {
     host: 'localhost',
     port: 27017,
     name: 'diary',
   }
-   /*
+      /*
 
-  env: 'production',
+  env: 'development',
   db: {
     host: 'widmore.mongohq.com',
     port: 10000,
@@ -19,10 +19,9 @@ var server = deployd({
         username: 'admin',
         password: 'md2013'
       }
-  }
-   */
-  }
-);
+   }
+    */
+});
 
 
 server.listen();

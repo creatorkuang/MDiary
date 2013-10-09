@@ -1,4 +1,7 @@
-<div class="bgwhite well well-small">
+<div ng-hide="isLogin" class="container">
+          <div ng-include="" src="'views/letmein.html'" ng-controller="letMeInCtrl"></div>
+</div>
+<div class="bgwhite well well-small" ng-show="isLogin">
  	<div class="row-fluid solid">
 		<div class="span4">
 			<h3 class="dashed center">心灵 成功日记</h3>

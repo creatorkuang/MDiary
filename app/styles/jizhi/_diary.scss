@@ -25,10 +25,21 @@
     .diaryCal{
       width:13%;
       display:inline-block;
-      height: 30px;
-      font-size: 1.5em;
+      height: 20px;
+      span{
+        width:30px;
+        font-size: 1.5em;
+        a{
+         color:white;
+        }
+      }
     };
     .calGrey{
-      color:#ddd;
+      span{
+       color:#999;
+      }
     }
+}
+.calDone{
+    color:red;
 }

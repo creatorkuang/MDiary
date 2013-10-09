@@ -29,7 +29,7 @@ angular.module('jizhiApp')
          if(data){
           $rootScope.me=data;
           $rootScope.isLogin=true;
-          $window.location.href="#/home/index";
+          $window.location.href="#/";
           $window._gaq.push(['_trackEvent', 'users','login',"success:"+data.id]);
          }else{
           $rootScope.isLogin=false;

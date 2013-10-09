@@ -28,7 +28,7 @@ angular.module('jizhiApp')
                          }else{
                            $rootScope.isLogin=false;
                          }
-                      $window.location.href="#/user/setting";
+                      $window.location.href="#/";
                       $window._gaq.push(['_trackEvent', 'users','registerUser',"userId:"+$scope.rgform.username]);
                      });
                   });
