@@ -1,5 +1,13 @@
-﻿<<<<<<< HEAD
-Here is the ggREADME
-=======
-积致
+Moring Diary (晨间日记)
 ====
+Base on Deployd
+====
+How to install?
+
+npm install
+
+cd product
+
+node app
+
+
