@@ -1,0 +1,18 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "package.json",
+        "product/package.json",
+        "product/public/components/angular-cache/package.json",
+        "product/public/components/angular-ui/package.json",
+        "product/public/components/angularytics/package.json",
+        "product/public/components/es5-shim/package.json",
+        "product/public/components/eventEmitter/package.json",
+        "product/public/components/jquery/package.json",
+        "product/public/components/json3/package.json",
+        "upload/package.json"
+      ]
+    }
+  }
+}
