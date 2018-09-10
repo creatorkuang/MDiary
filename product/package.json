@@ -4,8 +4,8 @@
   "private": true,
   
   "dependencies": {
-    "deployd":"0.6.11",
-    "dpd-email":"0.0.3",
-    "dpd-event":"0.0.2"
+    "deployd":"1.1.2",
+    "dpd-email":"0.3.0",
+    "dpd-event":"1.1.2"
   }
 }
